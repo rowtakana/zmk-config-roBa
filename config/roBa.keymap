@@ -26,17 +26,79 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        hash {
+            bindings = <&kp HASH>;
+            key-positions = <1 3 2>;
+        };
+
+        exqrametion {
+            bindings = <&kp EXCLAMATION>;
+            key-positions = <1 0>;
+        };
+
+        and {
+            bindings = <&kp AMPERSAND>;
+            key-positions = <12 13>;
+        };
+
+        question {
+            bindings = <&kp QUESTION>;
+            key-positions = <11 12 13>;
+        };
+
+        equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <18 19>;
+        };
+
+        percent {
+            bindings = <&kp PERCENT>;
+            key-positions = <18 19 20>;
+        };
+
+        lkako {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <24 25>;
+        };
+
+        rkako {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <30 31>;
+        };
+
+        underbar {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <30 31 32>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <8 9>;
+        };
+
+        plus {
+            bindings = <&kp PLUS>;
+            key-positions = <20 21>;
+        };
+
+        astarisc {
+            bindings = <&kp ASTERISK>;
+            key-positions = <13 18>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R  &kp T                                          &kp Y        &kp U  &kp I      &kp O    &kp P
-&mt LEFT_SHIFT A  &kp S         &kp D         &kp F  &kp G        &kp LS(LG(S))      &kp DOLLAR     &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON
-&kp Z             &kp X         &kp C         &kp V  &kp B        &kp SQT            &kp AT_SIGN    &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &none  &lt 0 SPACE  &none              &kp BACKSPACE  &lt 0 ENTER                             &trans
+&kp Q             &kp W         &kp E         &kp R  &kp T                                               &kp Y                     &kp U  &kp I      &kp O    &kp P
+&mt LEFT_SHIFT A  &kp S         &kp D         &kp F  &kp G        &trans             &kp DOLLAR          &kp H                     &kp J  &kp K      &kp L    &kp SEMICOLON
+&kp Z             &kp X         &kp C         &kp V  &kp B        &kp SQT            &kp AT_SIGN         &kp N                     &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &to 2  &lt 1 SPACE  &mt LCTRL F15      &mt LEFT_GUI ENTER  &mt LEFT_SHIFT BACKSPACE                             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
