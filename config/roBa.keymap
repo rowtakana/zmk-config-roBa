@@ -11,7 +11,6 @@
 &trackball {
     //automouse-layer = <4>;
     //scroll-layers = <5>;
-
     // arrows {
     //     layers = <3>;
     //     bindings =
@@ -88,6 +87,56 @@
             bindings = <&kp ASTERISK>;
             key-positions = <13 18>;
         };
+
+        win1 {
+            bindings = <&kp LG(NUMBER_1)>;
+            key-positions = <39 18>;
+        };
+
+        win2 {
+            bindings = <&kp LG(NUMBER_2)>;
+            key-positions = <39 19>;
+        };
+
+        win3 {
+            bindings = <&kp LG(NUMBER_3)>;
+            key-positions = <39 20>;
+        };
+
+        win4 {
+            bindings = <&kp LG(NUMBER_4)>;
+            key-positions = <39 21>;
+        };
+
+        win5 {
+            bindings = <&kp LG(N5)>;
+            key-positions = <39 17>;
+        };
+
+        win6 {
+            bindings = <&kp LG(NUMBER_6)>;
+            key-positions = <39 30>;
+        };
+
+        win7 {
+            bindings = <&kp LG(N7)>;
+            key-positions = <39 31>;
+        };
+
+        win8 {
+            bindings = <&kp LG(N8)>;
+            key-positions = <39 32>;
+        };
+
+        win9 {
+            bindings = <&kp LG(N9)>;
+            key-positions = <39 33>;
+        };
+
+        win0 {
+            bindings = <&kp LG(N0)>;
+            key-positions = <39 29>;
+        };
     };
 
     keymap {
@@ -101,7 +150,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &to 2  &lt 1 SPACE  &mt LCTRL F15      &mt LEFT_GUI ENTER  &mt LEFT_SHIFT BACKSPACE                             &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         custom {
