@@ -17,6 +17,21 @@
 };
 
 / {
+    /* プロセッサーノードの明示的な定義 */
+    zip_xy_to_scroll_mapper: zip_xy_to_scroll_mapper {
+        compatible = "zmk,input-processor-code-mapper";
+        #input-processor-cells = <0>;
+        xy-codes = <INPUT_REL_X>, <INPUT_REL_Y>;
+        target-codes = <INPUT_REL_HWHEEL>, <INPUT_REL_WHEEL>;
+    };
+
+    zip_scroll_scaler: zip_scroll_scaler {
+        compatible = "zmk,input-processor-scaler";
+        #input-processor-cells = <2>;
+        type = <INPUT_EV_REL>;
+        codes = <INPUT_REL_WHEEL>, <INPUT_REL_HWHEEL>;
+    };
+
     trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
